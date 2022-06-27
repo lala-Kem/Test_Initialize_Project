@@ -21,7 +21,7 @@ public class multiSelectNewStyle {
         System.out.println("STARTING_SETUP..............");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }

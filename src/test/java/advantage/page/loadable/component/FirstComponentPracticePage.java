@@ -34,22 +34,25 @@ public class FirstComponentPracticePage extends LoadableComponent<FirstComponent
     }
 
     public void searchText(String text){
-        inputSearch.sendKeys(text);
-//        inputSearch.sendKeys(Keys.ENTER);
-        inputSearch.sendKeys(Keys.ESCAPE);
-//        btnSearchPopup.click();
-//            btnSearch.click();
+//        inputSearch.sendKeys(text);
+////        inputSearch.sendKeys(Keys.ENTER);
+//        inputSearch.sendKeys(Keys.ESCAPE);
+////        btnSearchPopup.click();
+////            btnSearch.click();
+//
+//        String locator = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
+////        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
+////        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator))).click();
+//
+////        WebElement btn = btnSearch.isDisplayed() ? btnSearch : btnSearchPopup;
+//        WebElement btn = btnSearchPopup.isDisplayed() ? btnSearchPopup : btnSearch;
+//        String text2 = btnSearchPopup.isDisplayed() ? "btnSearchPopup" : "btnSearch";
+//        System.out.println("button is selected: \n"+text2);
+//                        btn.click();
 
-        String locator = "//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']";
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.cssSelector(locator))).click();
-
-        WebElement btn = btnSearch.isDisplayed() ? btnSearch : btnSearchPopup;
-        String text2 = btnSearch.isDisplayed() ? "btnSearch" : "btnSearchPopup";
-        System.out.println("button is selected: \n"+text2);
-                        btn.click();
-//        Actions actions = new Actions(driver);
-//        actions.keyDown(Keys.ENTER).build().perform();
+        Actions actions = new Actions(driver);
+        actions.sendKeys(inputSearch,text).perform();
+        actions.keyDown(Keys.RETURN).perform();
     }
 
     @Override

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -22,6 +23,12 @@ import java.util.*;
 public class TestWebElement {
 
     WebDriver driver;
+    @AfterTest
+    public void closeTest() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
     @Test(priority = 2)
     public void getWebElement() throws InterruptedException {
@@ -95,7 +102,7 @@ public class TestWebElement {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,enabled = false)
     public void useSelects() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -139,7 +146,7 @@ public class TestWebElement {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,enabled = false)
     public void usePopups() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -285,7 +292,7 @@ public class TestWebElement {
 
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,enabled = false )
     public void alertAuthenticate2 () throws InterruptedException {
 
         // Use webdrivermanager to handle chrome browser driver

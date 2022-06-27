@@ -1,13 +1,13 @@
 
-Y
-)src/test/java/Scripts/TestScreenShot.java,4\9\49649ee4f12b1565b6cd4b3ed39fea89b8d21487
-Z
-*src/test/java/Scripts/TestBrokenLinks.java,f\5\f5e84b6aaed0a02534bfcbdb72a6f3d80b558872
 `
 0src/test/java/dropDowns/multiSelectNewStyle.java,3\e\3e5640d5650076fbc47dc34d3db425486d6cca6f
-Z
-*src/test/java/Scripts/TestWindowStyle.java,7\7\77e777da7cc8c966c4b7ffd83140a4435a8c6585
-S
-#src/test/java/Scripts/TestWait.java,b\7\b7afc8721845f9a137c4f1530832e94501d130aa
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+`
+0src/test/java/advantage/page/factory/Verify.java,5\f\5f248f3463bf8e70a758b7c9aafd8dcca2a8f1c6
+m
+=src/test/java/advantage/page/factory/TestDemoPageFactory.java,2\3\230d82814ad846386ca483f2bcc74a5fb29aa32b
+c
+3src/test/java/advantage/page/factory/LoginPage.java,a\7\a7858e3b852148e4f852f8b9f09e0aa66f19fcba
+l
+<src/test/java/advantage/page/factory/LoadingPageFactory.java,8\e\8ec10a374fca160765cab7f83a87f26b45215ac2
+W
+'src/test/java/sample/OriginalStyle.java,a\d\adc37a55640b98bc4c36ad8cd8a154ba87c2c328

@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -19,11 +20,17 @@ public class TestScreenShot {
         System.out.println("STARTING_SETUP..............");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
+    @AfterTest
+    public void closeTest() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
     @Test
     public void testScreenShot(){
         driver.get("https://semantic-ui.com/modules/dropdown.html#/definition");
